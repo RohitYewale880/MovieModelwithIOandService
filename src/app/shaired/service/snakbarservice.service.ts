@@ -12,8 +12,8 @@ export class SnakbarserviceService {
 
   OpenSnakbar(msg : string) {
     this._snakbar.open(msg, 'close', {
-      verticalPosition:'top',
-      horizontalPosition: 'left',
+      verticalPosition:'bottom',
+      horizontalPosition: 'right',
       duration: 3000
     })
   }

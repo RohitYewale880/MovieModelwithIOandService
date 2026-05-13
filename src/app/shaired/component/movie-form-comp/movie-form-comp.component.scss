@@ -1,0 +1,35 @@
+.movimodel{
+    position: fixed;
+    top: 12%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+    max-width: 90%;
+    width: 60%;
+    z-index: 2;
+}
+
+.movimodel .card {
+    background-color: #212529;
+    color: #fff;
+}
+
+.net-pri-btn{
+    background-color:  #e50914;
+    color:  #fff;
+}
+
+.net-pri-btn:is(:hover, :active, :focus){
+    background-color:rgb(193, 17, 25);
+    color:  #fff;
+}
+
+.net-sec-btn{
+    background-color: black;
+    padding: 10px;
+    color:  #fff;
+}
+
+.net-sec-btn:is(:hover, :active, :focus){
+    background-color: #212529;
+    color: #fff;
+}

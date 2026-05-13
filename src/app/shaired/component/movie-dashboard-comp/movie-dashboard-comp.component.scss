@@ -1,0 +1,29 @@
+
+.logo {
+    height: 42px;
+    display: inline-block;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.net-pri-btn{
+    background-color:  #e50914;
+    color:  #fff;
+}
+
+.net-pri-btn:is(:hover, :active, :focus){
+    background-color:rgb(193, 17, 25);
+    color:  #fff;
+}
+
+.net-sec-btn{
+    background-color: #212529;
+    color:  #fff;
+}
+
+.net-sec-btn:is(:hover, :active, :focus){
+    background-color: #212529;
+    color: #fff;
+}

@@ -1,0 +1,44 @@
+
+    <div class="row cardcontainer mb-5 mt-5">
+        <div class="col-md-4 col-sm-6 mt-3" *ngFor="let movie of moviedata; trackBy : trackbyfun">
+            <div class="card moviecard h-100">
+
+                <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h2 style="padding-left: 10px;">{{movie.movieName}}</h2>
+                            </div>
+                            <div class="col-md-2">
+                                <span
+                                [ngClass]="{
+                                    'bg-success' : +movie.movieRating >=4,
+                                    'bg-warning' : +movie.movieRating < 4 &&  +movie.movieRating >= 3,
+                                    'bg-danger' : +movie.movieRating < 3
+                                }"
+                                class="badge"><strong style="font-weight: 500; font-size: larger;">{{movie.movieRating}}</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <figure>
+                            <img src="{{movie.movieImg}}" alt={{movie.movieName}}>
+                            <figcaption>
+                                <h2>{{movie.movieName}}</h2>
+                                <p>{{movie.movieDescription}}</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-between">
+                        <button 
+                        (click)="onEdit(movie)"
+                        type="button" class="btn btn-sm net-sec-btn">Edit</button>
+                        <button 
+                        (click)="onRemove(movie.movieId)"
+                        type="button" class="btn btn-sm net-pri-btn">Remove</button>
+                    </div>
+
+            </div>
+        </div>
+    </div>

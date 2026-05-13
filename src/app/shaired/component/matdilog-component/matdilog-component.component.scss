@@ -1,0 +1,24 @@
+.net-pri-btn{
+    background-color:  #e50914;
+    color:  #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.net-pri-btn:is(:hover, :active, :focus){
+    background-color:rgb(193, 17, 25);
+    color:  #fff;
+}
+
+.net-sec-btn{
+    background-color: black;
+    color:  #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.net-sec-btn:is(:hover, :active, :focus){
+    background-color: #212529;
+    color: #fff;
+}
+

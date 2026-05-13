@@ -1,0 +1,28 @@
+<div class="container pt-4 mb-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="logo">
+                <a href="./index.html">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/3840px-Netflix_2015_logo.svg.png">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <button type="button" *ngIf="!isformopen" (click)="onMovieFormAdd()" class="btn btn-sm net-pri-btn"> Add
+                Movie</button>
+        </div>
+
+        <app-movie-form-comp 
+        [getMovieObjet]="editMovieObj"
+        (emitformclose)="onFormClose($event)" *ngIf="isformopen"
+        (emitupdatedobj)="GetUpdateMovie($event)"
+        (emitnewobj)="GetNewObj($event)"></app-movie-form-comp>
+
+        <div class="col-md-12">
+            <app-movie-card-comp *ngIf="!isformopen" [moviedata]="movieArray"
+            (emitEditObj)="geteditobject($event)"    
+            (emitremoveid)="GetRemoveId($event)"></app-movie-card-comp>
+        </div>
+    </div>
+</div>
